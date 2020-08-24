@@ -32,7 +32,7 @@ function AddNote() {
     localStorage.setItem('notes', JSON.stringify(ArrayObj));
     inputText.value = null;
 
-    inputTitle=null;
+    inputTitle.value=null;
 
     showNote();
 }
