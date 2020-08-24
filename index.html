@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Application</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="flex1">
+            <h2 class="heading">My Notes</h2>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search" id="s-input">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+    <div class="middle">
+        <h1 class="one">Welcome To Your Notes</h1>
+        <div class="notes-section">
+            <h2 class="heading-2">Take Your Notes Here</h2>
+            <div id="title">
+                <h2 class="heading-title">Add Title Of Your Notes</h2>
+                <input type="text" id="title-ip" name="title" placeholder="Enter Title">
+            </div>
+            <div class="actual-notes">
+                <textarea name="notes" id="note1" rows="10" cols="30" placeholder="Add Notes"></textarea>
+                <button id="btn1" class="btn">Add Note</button>
+            </div>
+        </div>
+    </div>
+    <div class="third-part">
+        <h2 class="heading-3">Notes Section</h2>
+    </div>
+    <div class="n-notes" id="Note">
+    </div>
+</body>
+<script src="js/application.js"></script>
+
+</html>

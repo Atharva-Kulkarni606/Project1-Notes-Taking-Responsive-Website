@@ -1,0 +1,272 @@
+
+/* Base CSS- For Browser */
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* HEADER SECTION */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(129, 18, 96);
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.flex1{
+    display: flex;
+    margin: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.search{
+    display: flex;
+    margin: 1rem;
+}
+
+.search input{
+    padding: 0.4rem 0.3rem;
+    margin: 0px 0.4rem;
+    border-radius: 0.8rem;
+}
+
+.search button{
+    padding: 0.3rem 1rem;
+}
+
+.search input:hover{
+    border: 2px solid rgb(105, 10, 23);
+}
+
+.search button:hover{
+    cursor: pointer;
+    background-color: rgb(56, 105, 10);
+    border-radius: 0.8rem;
+}
+
+
+
+
+/* BODY SECTION NOTES */
+.one{
+    text-align: center;
+    margin: 2rem;
+}
+
+.notes-section{
+    border: 2px solid rgb(63, 65, 197);
+    margin: 0px auto;
+    height: 25rem;
+    width: 30rem;
+    overflow: hidden;
+}
+.middle{
+display: flex;
+flex-direction: column;
+}
+
+.actual-notes textarea{
+    margin: 0.7rem;
+    width: 25rem;
+}
+
+.actual-notes{
+    margin-top: 0.3rem ;
+}
+
+#title{
+    margin: 0.3rem;
+    width: 25rem;
+}
+#title h2{
+    margin-left: 0.3rem;
+    margin-bottom: 1rem;
+}
+#title-ip {
+    width: 24.7rem;
+    margin-left: 0.5rem;   
+    height: 1.5rem; 
+}
+
+.heading-2{
+    display: inline-block;
+    width: 80%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.btn{
+    padding: 0.5rem 0.8rem;
+    margin: 0.2rem 0.5rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+.btn:hover{
+    background-color: rgb(129, 18, 123);
+    cursor: pointer;
+}
+
+/* After NOTES INPUT SECTION */
+
+.heading-3{
+    margin: 1rem;
+    text-align: center;
+    background-color: rgb(37, 167, 177);
+    padding: 1rem;
+}
+
+
+/* //Storage of notes section  */
+.n-notes{
+    margin:0% 20%;
+    box-sizing: border-box;
+ } 
+#Note h2{
+    margin: auto;
+} 
+
+.n-note{
+    border: 2px solid black;
+    width: 30%;
+    height: 30%;
+    box-sizing: border-box;
+    padding: 0.2rem 0.5rem;
+}
+.n-btn{
+    padding: 0.5rem 0.8rem;
+    margin: 0.2rem 0.5rem;
+    width: 10rem;
+    border-radius: 1rem; 
+     display: block;
+     margin: auto;
+
+    
+}
+
+.n-note-heading{
+    text-align: center;
+}
+
+.n-notes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.n-note{
+
+    margin: 1rem 0.8rem;
+    width: 30%;
+}
+.n-btn:hover{
+    background-color: rgb(129, 18, 123);
+    cursor: pointer;
+}
+
+
+
+
+/* //For Responsive Design */
+@media (min-width:200px) and (max-width:400px){
+    .navbar{
+        flex-direction: column;
+    }
+    .flex1{
+        justify-content: center;
+        margin: 0.5rem;
+    }
+    .search{
+        margin: 0.3rem;
+        justify-content: center;
+    }
+    .search input{
+        width: 6rem;
+    }
+   .heading-title{
+       font-size: 0.9rem;
+   }
+   #title input{
+       width: 9.2rem;
+   }
+
+    .notes-section{
+        width: 12rem;
+        height: 24rem;
+    }
+    .actual-notes textarea{
+        width: 80%;
+    }
+   #Note{
+       font-size: 0.3rem;
+       text-align: center;
+   }
+     
+   .one{
+       font-size: 0.9rem;
+       font-weight: bold;
+   }
+    .heading-2{
+        font-size: 1rem;
+        width: 14rem;
+    }
+    .n-note{
+        width: 100%;
+    }
+    .n-btn{
+        width: 80%;
+        padding: 0.7rem 0.2rem;
+    }
+
+}
+
+/* //For Responsive Design */
+@media  (min-width:400px) and (max-width:500px){
+    .navbar{
+        flex-direction: column;
+    }
+    .flex1{
+        justify-content: center;
+        margin: 0.3rem;
+    }
+    .search{
+        margin: 0.3rem;
+        justify-content: center;
+    }
+    .notes-section{
+        width: 18rem;
+    }
+    .actual-notes textarea{
+        width: 80%;
+    }
+    .n-note{
+        width: 100%;
+    }
+    #Note{
+        font-size: 0.5rem;
+    }
+
+    .heading-2{
+        font-size: 1.5rem;
+    }
+    #title-ip{
+        width: 14rem;
+    }
+    #title h2{
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* //For Responsive Design */
+@media (min-width:500px) and (max-width:1000px){
+    .n-note{
+        width: 80%;
+    }
+    .n-btn{
+        display: block;
+        margin: auto;
+    }
+}
