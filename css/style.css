@@ -215,8 +215,9 @@ flex-direction: column;
         width: 100%;
     }
     .n-btn{
-        width: 80%;
-        padding: 0.7rem 0.2rem;
+       width: 40%;
+        padding: 0.1rem 0.1rem;
+        font-size: 0.3rem;
     }
 
 }
@@ -256,7 +257,11 @@ flex-direction: column;
     #title h2{
         font-size: 1.2rem;
     }
-
+     .n-btn{
+    width: 30%;
+    padding: 0.3rem 0.1rem;
+    font-size: 0.3rem;
+   }
 }
 
 
