@@ -5,35 +5,27 @@ btn.addEventListener('click', AddNote);
 
 function AddNote() {
     let inputText = document.getElementById('note1');
-
-
     let inputTitle=document.getElementById('title-ip');
-
-
     notes = localStorage.getItem('notes');
-
     let inputObj={
         title: inputTitle.value,
         text :inputText.value
     }
-
     if (notes == null) {
         ArrayObj = []
     } else {
         ArrayObj = JSON.parse(notes);
     }
     let blankIndex= ArrayObj.indexOf("");
-   
-
-    ArrayObj.push(inputObj);
+    if(ArrayObj.length >= 1){
+        ArrayObj.push(inputObj);
+    }
     if(ArrayObj.includes("")){
         ArrayObj.splice(blankIndex,1);
     }
     localStorage.setItem('notes', JSON.stringify(ArrayObj));
     inputText.value = null;
-
     inputTitle.value=null;
-
     showNote();
 }
 
@@ -45,12 +37,7 @@ function showNote() {
     } else {
         ArrayObj = JSON.parse(notes);
     }
-
-
-   
-
     let string1 = "";
-
     ArrayObj.forEach(function (element, index) {
         string1 += `
         <div class="n-note">
@@ -60,7 +47,6 @@ function showNote() {
     </div>
         `
     });
-
     let Text = document.getElementById('Note');
     if (ArrayObj.length != 0) {
         Text.innerHTML = string1;
@@ -74,7 +60,6 @@ function showNote() {
 //Function That will delete the node
 function deleteNode(index){
     notes = localStorage.getItem('notes');
-
     if (notes == null) {
         ArrayObj = []
     } else {
@@ -82,8 +67,7 @@ function deleteNode(index){
     }
    ArrayObj.splice(index,1);
     localStorage.setItem('notes',JSON.stringify(ArrayObj));
-
-   showNote();
+    showNote();
 }
 
 let searchText= document.getElementById('s-input');
@@ -99,7 +83,6 @@ Array.from(noteCollection).forEach(function(element){
     }
 });
 });
-
 
 //To clear the  text on the search bar when one clicks on it
 let searchbtn=document.getElementById('search-btn');
