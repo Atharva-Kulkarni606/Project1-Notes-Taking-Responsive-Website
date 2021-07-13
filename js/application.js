@@ -7,17 +7,18 @@ function AddNote() {
     let inputText = document.getElementById('note1');
     let inputTitle=document.getElementById('title-ip');
     notes = localStorage.getItem('notes');
+
     let inputObj={
         title: inputTitle.value,
         text :inputText.value
     }
     if (notes == null) {
         ArrayObj = []
-    } else {
+    }else{
         ArrayObj = JSON.parse(notes);
     }
     let blankIndex= ArrayObj.indexOf("");
-    if(ArrayObj.length >= 1){
+    if(ArrayObj.length >= 1 || inputObj.title != "" && inputObj.text != ""){
         ArrayObj.push(inputObj);
     }
     if(ArrayObj.includes("")){
@@ -47,6 +48,7 @@ function showNote() {
     </div>
         `
     });
+
     let Text = document.getElementById('Note');
     if (ArrayObj.length != 0) {
         Text.innerHTML = string1;
@@ -66,8 +68,8 @@ function deleteNode(index){
         ArrayObj = JSON.parse(notes);
     }
    ArrayObj.splice(index,1);
-    localStorage.setItem('notes',JSON.stringify(ArrayObj));
-    showNote();
+   localStorage.setItem('notes',JSON.stringify(ArrayObj));
+   showNote();
 }
 
 let searchText= document.getElementById('s-input');
@@ -83,6 +85,7 @@ Array.from(noteCollection).forEach(function(element){
     }
 });
 });
+
 
 //To clear the  text on the search bar when one clicks on it
 let searchbtn=document.getElementById('search-btn');
